@@ -28,6 +28,7 @@
 		BA7DA7EB29DAF88F002A79FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA7EA29DAF88F002A79FC /* ProfileViewController.swift */; };
 		BA7DA7ED29DAF89F002A79FC /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA7EC29DAF89F002A79FC /* ContactsViewController.swift */; };
 		BA7DA7EF29DAF8C3002A79FC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA7EE29DAF8C3002A79FC /* MenuViewController.swift */; };
+		BA7DA7F129DB00E0002A79FC /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA7F029DB00E0002A79FC /* UITableView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BA7DA7EA29DAF88F002A79FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BA7DA7EC29DAF89F002A79FC /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		BA7DA7EE29DAF8C3002A79FC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BA7DA7F029DB00E0002A79FC /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		BA7DA7A429DAE37A002A79FC /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				BA7DA7F229DB00F3002A79FC /* Core */,
 				BA7DA7C629DAF455002A79FC /* App */,
 				BA7DA7A529DAE37A002A79FC /* AppDelegate.swift */,
 				BA7DA7A729DAE37A002A79FC /* SceneDelegate.swift */,
@@ -264,6 +267,22 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BA7DA7F229DB00F3002A79FC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA7F329DB00F9002A79FC /* Extentions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BA7DA7F329DB00F9002A79FC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA7F029DB00E0002A79FC /* UITableView+Reusable.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +406,7 @@
 				BA7DA7EB29DAF88F002A79FC /* ProfileViewController.swift in Sources */,
 				BA7DA7DD29DAF55B002A79FC /* CartBuilder.swift in Sources */,
 				BA7DA7BE29DAE9D4002A79FC /* TabBarItems.swift in Sources */,
+				BA7DA7F129DB00E0002A79FC /* UITableView+Reusable.swift in Sources */,
 				BA7DA7EF29DAF8C3002A79FC /* MenuViewController.swift in Sources */,
 				BA7DA7DF29DAF571002A79FC /* MenuBuilder.swift in Sources */,
 				BA7DA7E529DAF6A8002A79FC /* ContactsPresenter.swift in Sources */,

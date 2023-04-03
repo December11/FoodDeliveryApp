@@ -12,6 +12,6 @@
 --ifdef no-indent
 
 # Генерируем хедер
---header "{file}\nCopyright © Darkness Production. All rights reserved."
+--header "{file}\nCopyright © Alla Shkolnik. All rights reserved."
 
 --swiftversion 5.1

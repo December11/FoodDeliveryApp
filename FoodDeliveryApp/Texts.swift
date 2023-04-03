@@ -1,5 +1,5 @@
 // Texts.swift
-// Copyright © Darkness Production. All rights reserved.
+// Copyright © Alla Shkolnik. All rights reserved.
 
 struct Texts {
     static let menuTabbar = "Меню"

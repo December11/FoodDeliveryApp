@@ -1,5 +1,5 @@
 // CartViewController.swift
-// Copyright © Darkness Production. All rights reserved.
+// Copyright © Alla Shkolnik. All rights reserved.
 
 import UIKit
 
