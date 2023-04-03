@@ -1,0 +1,17 @@
+# file options
+--exclude Pods
+
+# rules
+--disable void, trailingCommas, unusedArguments, redundantReturn, enumNamespaces, wrapMultilineStatementBraces
+--maxwidth 120
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--indent 4
+
+--ifdef no-indent
+
+# Генерируем хедер
+--header "{file}\nCopyright © Darkness Production. All rights reserved."
+
+--swiftversion 5.1
