@@ -12,4 +12,7 @@ struct Constants {
     static let inset20: CGFloat = 20.0
     static let inset24: CGFloat = 24.0
     static let inset32: CGFloat = 32.0
+    static let inset132: CGFloat = 132.0
+
+    static let datasourceURL = "http://darknessproduction.com/food.json"
 }

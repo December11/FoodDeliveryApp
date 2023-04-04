@@ -10,10 +10,10 @@ final class CategoryCollectionView: UICollectionView {
         static let itemHeight: CGFloat = 32
     }
 
-    var itemTapCompletion: ((String) -> Void)?
+    var categoryWasChoosen: ((String) -> Void)?
 
     private var selectedIndex = 0
-    private let contents: [String]
+    private let categories: [String]
     private let layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -25,7 +25,7 @@ final class CategoryCollectionView: UICollectionView {
     // MARK: - Construction
 
     init(categories: [String]) {
-        contents = categories
+        self.categories = categories
         super.init(frame: .zero, collectionViewLayout: layout)
         configure()
     }
@@ -39,6 +39,7 @@ final class CategoryCollectionView: UICollectionView {
         delegate = self
         allowsMultipleSelection = false
         registerCell(CategoryCollectionViewCell.self)
+        categoryWasChoosen?(categories[selectedIndex])
         configureUI()
     }
 
@@ -46,6 +47,9 @@ final class CategoryCollectionView: UICollectionView {
         showsHorizontalScrollIndicator = false
         backgroundColor = Colors.backgroundMinor
         contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        snp.makeConstraints { make in
+            make.height.equalTo(Constants.inset32)
+        }
     }
 }
 
@@ -54,8 +58,12 @@ final class CategoryCollectionView: UICollectionView {
 extension CategoryCollectionView: UICollectionViewDataSource {
     // MARK: - Functions
 
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        contents.count
+        categories.count
     }
 
     func collectionView(
@@ -63,11 +71,11 @@ extension CategoryCollectionView: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard
-            !contents.isEmpty,
-            contents.indices.contains(indexPath.item),
+            !categories.isEmpty,
+            categories.indices.contains(indexPath.item),
             let cell: CategoryCollectionViewCell = collectionView.cell(forRowAt: indexPath)
         else { return UICollectionViewCell() }
-        cell.configure(title: contents[indexPath.item], isSelected: indexPath.item == selectedIndex)
+        cell.configure(title: categories[indexPath.item], isSelected: indexPath.item == selectedIndex)
         return cell
     }
 }
@@ -77,6 +85,7 @@ extension CategoryCollectionView: UICollectionViewDataSource {
 extension CategoryCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
+        categoryWasChoosen?(categories[selectedIndex])
         reloadData()
     }
 }

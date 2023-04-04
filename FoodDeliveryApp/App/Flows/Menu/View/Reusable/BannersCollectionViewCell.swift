@@ -23,12 +23,6 @@ final class BannersCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
 
-//    func configure(content: String) {
-//        imageView.downloadedImage(from: content, contentMode: .scaleAspectFill)
-//        imageView.image = UIImage(systemName: "pencil.circle")
-//        configureUI()
-//    }
-
     func configure() {
 //        imageView.downloadedImage(from: content, contentMode: .scaleAspectFill)
         imageView.image = UIImage(systemName: "pencil.circle")
@@ -37,7 +31,9 @@ final class BannersCollectionViewCell: UICollectionViewCell {
 
     private func configureUI() {
         addSubview(imageView)
-
+        layer.shadowRadius = 10.0
+        layer.shadowColor = Colors.bannerShadow?.cgColor
+        clipsToBounds = false
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

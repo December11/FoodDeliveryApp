@@ -39,10 +39,16 @@
 		BA7DA80429DB1B71002A79FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80329DB1B71002A79FC /* Constants.swift */; };
 		BA7DA80629DB1C07002A79FC /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80529DB1C07002A79FC /* UICollectionView+Reusable.swift */; };
 		BA7DA80829DB1DB8002A79FC /* BannersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80729DB1DB8002A79FC /* BannersCollectionViewCell.swift */; };
-		BA7DA80B29DB345D002A79FC /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80A29DB345D002A79FC /* NavigationMenuView.swift */; };
+		BA7DA80B29DB345D002A79FC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80A29DB345D002A79FC /* HeaderView.swift */; };
 		BA7DA80D29DB3B75002A79FC /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80C29DB3B75002A79FC /* CategoryCollectionView.swift */; };
 		BA7DA80F29DB3B9B002A79FC /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA80E29DB3B9B002A79FC /* CategoryCollectionViewCell.swift */; };
 		BA7DA81129DB5631002A79FC /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA81029DB5631002A79FC /* AddToCartButton.swift */; };
+		BA7DA81629DC2576002A79FC /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA81529DC2576002A79FC /* Dish.swift */; };
+		BA7DA81E29DC30A8002A79FC /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA81D29DC30A8002A79FC /* MenuDTO.swift */; };
+		BA7DA82429DC45B1002A79FC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA82329DC45B1002A79FC /* NetworkService.swift */; };
+		BA7DA82829DC7696002A79FC /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA82729DC7696002A79FC /* Menu.swift */; };
+		BA7DA82B29DCBBF0002A79FC /* AppImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA82A29DCBBF0002A79FC /* AppImageView.swift */; };
+		BA7DA82D29DCC917002A79FC /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DA82C29DCC917002A79FC /* ImageDownloadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,10 +85,16 @@
 		BA7DA80329DB1B71002A79FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA7DA80529DB1C07002A79FC /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		BA7DA80729DB1DB8002A79FC /* BannersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCollectionViewCell.swift; sourceTree = "<group>"; };
-		BA7DA80A29DB345D002A79FC /* NavigationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuView.swift; sourceTree = "<group>"; };
+		BA7DA80A29DB345D002A79FC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BA7DA80C29DB3B75002A79FC /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
 		BA7DA80E29DB3B9B002A79FC /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA7DA81029DB5631002A79FC /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
+		BA7DA81529DC2576002A79FC /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		BA7DA81D29DC30A8002A79FC /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		BA7DA82329DC45B1002A79FC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BA7DA82729DC7696002A79FC /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		BA7DA82A29DCBBF0002A79FC /* AppImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImageView.swift; sourceTree = "<group>"; };
+		BA7DA82C29DCC917002A79FC /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +214,7 @@
 			children = (
 				BA7DA7EE29DAF8C3002A79FC /* MenuViewController.swift */,
 				BA7DA7FF29DB1A58002A79FC /* MenuView.swift */,
-				BA7DA80A29DB345D002A79FC /* NavigationMenuView.swift */,
+				BA7DA80A29DB345D002A79FC /* HeaderView.swift */,
 				BA7DA7F729DB03BB002A79FC /* MenuTableView.swift */,
 				BA7DA80129DB1B25002A79FC /* BannersCollectionView.swift */,
 				BA7DA80C29DB3B75002A79FC /* CategoryCollectionView.swift */,
@@ -307,7 +319,10 @@
 		BA7DA7F229DB00F3002A79FC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BA7DA82929DCBBD5002A79FC /* UIComponents */,
+				BA7DA81229DC24FD002A79FC /* Entity */,
 				BA7DA7F329DB00F9002A79FC /* Extentions */,
+				BA7DA82E29DCC91E002A79FC /* Services */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -330,6 +345,41 @@
 				BA7DA80E29DB3B9B002A79FC /* CategoryCollectionViewCell.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		BA7DA81229DC24FD002A79FC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA81729DC27DC002A79FC /* DTO */,
+				BA7DA81529DC2576002A79FC /* Dish.swift */,
+				BA7DA82729DC7696002A79FC /* Menu.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BA7DA81729DC27DC002A79FC /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA81D29DC30A8002A79FC /* MenuDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BA7DA82929DCBBD5002A79FC /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA82A29DCBBF0002A79FC /* AppImageView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		BA7DA82E29DCC91E002A79FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DA82329DC45B1002A79FC /* NetworkService.swift */,
+				BA7DA82C29DCC917002A79FC /* ImageDownloadService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,7 +506,7 @@
 				BA7DA7FE29DB0D24002A79FC /* UIView+Extensions.swift in Sources */,
 				BA7DA7C229DAEA68002A79FC /* Images.swift in Sources */,
 				BA7DA7DB29DAF54A002A79FC /* ProfileBuilder.swift in Sources */,
-				BA7DA80B29DB345D002A79FC /* NavigationMenuView.swift in Sources */,
+				BA7DA80B29DB345D002A79FC /* HeaderView.swift in Sources */,
 				BA7DA7C429DAED9E002A79FC /* Colors.swift in Sources */,
 				BA7DA80629DB1C07002A79FC /* UICollectionView+Reusable.swift in Sources */,
 				BA7DA7C029DAEA47002A79FC /* Texts.swift in Sources */,
@@ -466,15 +516,21 @@
 				BA7DA7E129DAF652002A79FC /* CartPresenter.swift in Sources */,
 				BA7DA7BA29DAE4B5002A79FC /* TabBarViewController.swift in Sources */,
 				BA7DA7EB29DAF88F002A79FC /* ProfileViewController.swift in Sources */,
+				BA7DA81629DC2576002A79FC /* Dish.swift in Sources */,
+				BA7DA82D29DCC917002A79FC /* ImageDownloadService.swift in Sources */,
 				BA7DA80029DB1A58002A79FC /* MenuView.swift in Sources */,
+				BA7DA81E29DC30A8002A79FC /* MenuDTO.swift in Sources */,
 				BA7DA7DD29DAF55B002A79FC /* CartBuilder.swift in Sources */,
 				BA7DA7FA29DB04E0002A79FC /* MenuTableViewCell.swift in Sources */,
 				BA7DA7BE29DAE9D4002A79FC /* TabBarItems.swift in Sources */,
 				BA7DA80D29DB3B75002A79FC /* CategoryCollectionView.swift in Sources */,
 				BA7DA7F129DB00E0002A79FC /* UITableView+Reusable.swift in Sources */,
+				BA7DA82429DC45B1002A79FC /* NetworkService.swift in Sources */,
 				BA7DA7EF29DAF8C3002A79FC /* MenuViewController.swift in Sources */,
+				BA7DA82829DC7696002A79FC /* Menu.swift in Sources */,
 				BA7DA7DF29DAF571002A79FC /* MenuBuilder.swift in Sources */,
 				BA7DA7E529DAF6A8002A79FC /* ContactsPresenter.swift in Sources */,
+				BA7DA82B29DCBBF0002A79FC /* AppImageView.swift in Sources */,
 				BA7DA7E729DAF6BF002A79FC /* MenuPresenter.swift in Sources */,
 				BA7DA7E329DAF691002A79FC /* ProfilePresenter.swift in Sources */,
 				BA7DA7E929DAF86D002A79FC /* CartViewController.swift in Sources */,

@@ -11,4 +11,6 @@ struct Colors {
     static let textInvert = UIColor(named: "textInvert")
     static let backgroundMain = UIColor.white
     static let backgroundMinor = UIColor(named: "backgroundMinor")
+    static let bannerShadow = UIColor(named: "bannerShadow")
+    static let headerShadow = UIColor(named: "headerShadow")
 }

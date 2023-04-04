@@ -3,23 +3,32 @@
 
 import UIKit
 
+enum ScrollingDirection {
+    case down, up
+}
+
 final class MenuTableView: UITableView {
-    ///  Замыкание для определения поведения, когда было выбрано значение в таблице
-    var didSelectRowHandler: ((String) -> Void)?
+    var didStartScrolling: ((ScrollingDirection) -> ())?
 
-//    private var values = [String]()
+    private var previousScrollDirection: ScrollingDirection?
+    private var values: Menu
 
-    init(values: [MenuConfiguration] = []) {
-//        self.values = values
+    init(menu: Menu) {
+        values = menu
         super.init(frame: .zero, style: .plain)
         configure()
     }
 
     required init?(coder: NSCoder) { nil }
 
+    func scrollToSection(sectionIndex: Int) {
+        let indexPath = IndexPath(row: 0, section: sectionIndex)
+        scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+
     private func configure() {
         dataSource = self
-//        delegate = self
+        delegate = self
         registerCell(MenuTableViewCell.self)
 
         backgroundColor = Colors.backgroundMain
@@ -32,32 +41,51 @@ final class MenuTableView: UITableView {
 // MARK: - UITableViewDataSource
 
 extension MenuTableView: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10 // values.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        values.sections.count
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard values.sections.indices.contains(section) else { return 0 }
+        return values.sections[section].dishes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard values.indices.contains(indexPath.row) else { return UITableViewCell() }
-        guard
-            let cell: MenuTableViewCell = tableView.cell(forRowAt: indexPath)
+        guard values.sections.indices.contains(indexPath.section),
+              values.sections[indexPath.section].dishes.count > indexPath.row,
+              let cell: MenuTableViewCell = tableView.cell(forRowAt: indexPath)
         else { return UITableViewCell() }
-        let content = MenuConfiguration()
-//        cell.configure(content: values[indexPath.row])
-        cell.configure(content: content)
+        let dishes = values.sections[indexPath.section].dishes
+        cell.configure(content: dishes[indexPath.row], isFirst: indexPath.section == 0 && indexPath.row == 0)
         return cell
     }
 }
 
 // MARK: - UITableViewDelegate
 
-// extension MenuTableView: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+extension MenuTableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 //        guard values.indices.contains(indexPath.row) else { return }
 //        didSelectRowHandler?(values[indexPath.row])
-//    }
-// }
+    }
+}
+
+extension MenuTableView: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("Scrolling did scrolled")
+        if scrollView.contentOffset.y < 0 {
+            print("Scrolling up")
+            if previousScrollDirection != .up {
+                didStartScrolling?(.up)
+            }
+            previousScrollDirection = .up
+        } else if scrollView.contentOffset.y > 0 {
+            print("Scrolling down")
+            if previousScrollDirection != .down {
+                didStartScrolling?(.down)
+            }
+            previousScrollDirection = .down
+        }
+    }
+}

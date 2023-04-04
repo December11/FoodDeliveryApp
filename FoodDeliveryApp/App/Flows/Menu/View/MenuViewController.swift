@@ -4,11 +4,18 @@
 import UIKit
 
 final class MenuViewController: UIViewController, MenuViewInputProtocol {
-    weak var presenter: MenuPresenter?
+    let presenter: MenuPresenter?
 
-    private let contentView = MenuView()
+    private var contentView: MenuView?
+    private let activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.style = .large
+        return view
+    }()
 
-    init() {
+    init(presenter: MenuPresenter) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -16,14 +23,32 @@ final class MenuViewController: UIViewController, MenuViewInputProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
         configureUI()
+    }
+
+    private func configure() {
+        presenter?.fetch(completion: { [weak self] menu in
+            guard let self else { return }
+            self.contentView = MenuView(menu: menu)
+
+            if let contentView = self.contentView {
+                self.view.addSubview(contentView)
+                self.activityIndicator.stopAnimating()
+                contentView.snp.makeConstraints { make in
+                    make.edges.equalTo(self.view.safeAreaLayoutGuide.snp.edges)
+                }
+            }
+        })
     }
 
     private func configureUI() {
         view.backgroundColor = Colors.backgroundMinor
-        view.addSubview(contentView)
-        contentView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalTo(view.center)
         }
 
         navigationController?.isNavigationBarHidden = true

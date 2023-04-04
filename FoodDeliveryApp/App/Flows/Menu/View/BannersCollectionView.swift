@@ -45,7 +45,6 @@ final class BannersCollectionView: UICollectionView {
         backgroundColor = Colors.backgroundMinor
         snp.makeConstraints { make in
             make.height.equalTo(Layout.itemHeight)
-            make.width.equalTo(Layout.itemWidth * 2 + 16.0)
         }
     }
 }
