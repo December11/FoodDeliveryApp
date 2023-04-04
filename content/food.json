@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Пицца",
+        "dishes": [
+            {
+                "name": "Пицца Сырная",
+                "description": "С томатным соусом и Моцареллой",
+                "price": "489 ₽",
+                "photoLink": "https://shefcook.ru/wp-content/uploads/2017/12/351.jpg"
+            },
+            {
+                "name": "Пицца Цыпленок Барбекю",
+                "description": "С куриным филе, хрустящим беконом и луком",
+                "price": "728 ₽",
+                "photoLink": "https://www.edaedet.ru/upload/iblock/ed5/ed57fbca32def289227ea00d01fdb0f1.JPG"
+            },
+            {
+                "name": "Пицца Пепперони",
+                "description": "С пикантной пепперони, Моцареллой и томатным соусом",
+                "price": "728 ₽",
+                "photoLink": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Горячее",
+        "dishes": [
+            {
+                "name": "Картофель по-баварски",
+                "description": "Запеченые дольки картофеля с альпийскими колбасками и луком",
+                "price": "249 ₽",
+                "photoLink": "https://www.povarenok.ru/data/cache/2016jun/27/12/1626326_97592-640x480.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Десерты",
+        "dishes": [
+            {
+                "name": "Узелки сладкие",
+                "description": "С корицей и сахарной пудрой",
+                "price": "159 ₽",
+                "photoLink": "https://sdelajtort.ru/assets/dist/img/pages/recipe-page/reczeptyi-bulochek/bulochki-uzelki-s-koriczej/bulochki-uzelki-s-koriczej14.jpg"
+            },
+            {
+                "name": "Рогалики с клубникой",
+                "description": "С сыром кремчиз, клубникой и соусом",
+                "price": "229 ₽",
+                "photoLink": "https://russian-boy.ru/wp-content/uploads/2020/09/0-1.png"
+            },
+            {
+                "name": "Сырники",
+                "description": "С соусом",
+                "price": "189 ₽",
+                "photoLink": "https://prostokvashino.ru/upload/iblock/b1b/b1b727e06d8f0b23c6ea5e8f31c7df0f.jpg"
+            },
+            {
+                "name": "Чизкейк Нью-Йорк",
+                "description": "С клубничным соусом",
+                "price": "199 ₽",
+                "photoLink": "https://i.obozrevatel.com/food/recipemain/2019/2/8/999470-880x544.jpg?size=636x424"
+            }
+        ]
+    },
+    {
+        "title": "Напитки",
+        "dishes": [
+            {
+                "name": "Квас Русский Дар",
+                "description": "Натуральный квас",
+                "price": "139 ₽",
+                "photoLink": "https://rskrf.ru/upload/iblock/0e7/0e78e8e579b80b8eaa6fee26e47cf530.jpg"
+            },
+            {
+                "name": "Морс",
+                "description": "Брусничный",
+                "price": "179 ₽",
+                "photoLink": "https://s1.eda.ru/StaticContent/Photos/121208021522/130111145722/p_O.jpg"
+            }
+        ]
+    }
+]
