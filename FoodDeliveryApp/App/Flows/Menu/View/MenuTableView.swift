@@ -9,9 +9,11 @@ enum ScrollingDirection {
 
 final class MenuTableView: UITableView {
     var didStartScrolling: ((ScrollingDirection) -> ())?
+    var didScrollToNextSection: ((Int) -> ())?
 
     private var previousScrollDirection: ScrollingDirection?
     private var values: Menu
+    private var currentSection = 0
 
     init(menu: Menu) {
         values = menu
@@ -73,6 +75,15 @@ extension MenuTableView: UITableViewDelegate {
 
 extension MenuTableView: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if
+            let firstCell = visibleCells.first,
+            let indexPath = indexPath(for: firstCell),
+            indexPath.section != currentSection {
+            currentSection = indexPath.section
+            print("User scrolled to beginning of section \(indexPath.section)")
+            didScrollToNextSection?(indexPath.section)
+        }
+
         print("Scrolling did scrolled")
         if scrollView.contentOffset.y < 0 {
             print("Scrolling up")

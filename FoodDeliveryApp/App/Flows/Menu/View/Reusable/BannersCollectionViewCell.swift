@@ -4,16 +4,8 @@
 import UIKit
 
 final class BannersCollectionViewCell: UICollectionViewCell {
-//    private let imageView: UIImageViewAsync = {
-//        let imageView = UIImageViewAsync()
-//        imageView.layer.masksToBounds = true
-//        imageView.layer.cornerRadius = Constants.inset10
-//        return imageView
-//    }()
-
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .systemPink
+    private let imageView: AppImageView = {
+        let imageView = AppImageView(contentMode: .scaleAspectFill)
         imageView.roundCorners([.allCorners], radius: Constants.inset10)
         return imageView
     }()
@@ -23,9 +15,8 @@ final class BannersCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
 
-    func configure() {
-//        imageView.downloadedImage(from: content, contentMode: .scaleAspectFill)
-        imageView.image = UIImage(systemName: "pencil.circle")
+    func configure(URLString: String) {
+        imageView.downloadedImage(URLString: URLString)
         configureUI()
     }
 

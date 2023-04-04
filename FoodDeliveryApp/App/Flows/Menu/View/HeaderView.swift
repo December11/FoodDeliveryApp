@@ -17,7 +17,7 @@ final class HeaderView: UIView {
         return imageView
     }()
 
-    private let bannersCollectionView = BannersCollectionView(imageURLStrings: [])
+    private let bannersCollectionView = BannersCollectionView(imageURLStrings: Constants.bannerURLs)
     private let categoryCollectionView: CategoryCollectionView
 
     init(categories: [String]) {
@@ -58,6 +58,13 @@ final class HeaderView: UIView {
                 }
             }
         }
+    }
+
+    func selectCategory(index: Int) {
+        categoryCollectionView.collectionView(
+            categoryCollectionView,
+            didSelectItemAt: IndexPath(item: index, section: 0)
+        )
     }
 
     private func configureUI() {

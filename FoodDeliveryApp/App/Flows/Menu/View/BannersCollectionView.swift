@@ -55,7 +55,7 @@ extension BannersCollectionView: UICollectionViewDataSource {
     // MARK: - Functions
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        2 // contents.count
+        contents.count
     }
 
     func collectionView(
@@ -63,11 +63,10 @@ extension BannersCollectionView: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard
-//            !contents.isEmpty,
-//            contents.indices.contains(indexPath.item),
+            contents.indices.contains(indexPath.item),
             let cell: BannersCollectionViewCell = collectionView.cell(forRowAt: indexPath)
         else { return UICollectionViewCell() }
-        cell.configure()
+        cell.configure(URLString: contents[indexPath.row])
         return cell
     }
 }

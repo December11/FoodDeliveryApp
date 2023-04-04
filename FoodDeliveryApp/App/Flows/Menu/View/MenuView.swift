@@ -34,6 +34,11 @@ final class MenuView: UIView {
             }
         }
 
+        menuTableView.didScrollToNextSection = { [weak self] section in
+            guard let self else { return }
+            self.headerView.selectCategory(index: section)
+        }
+
         menuTableView.didStartScrolling = { [weak self] direction in
             guard let self else { return }
             self.headerView.layer.shadowColor = Colors.headerShadow?.cgColor
