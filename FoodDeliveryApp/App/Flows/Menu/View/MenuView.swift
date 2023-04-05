@@ -52,15 +52,24 @@ final class MenuView: UIView {
                     self.headerView.snp.updateConstraints { update in
                         update.height.equalTo(260)
                     }
+                    self.menuTableView.roundCorners([.allCorners], radius: Constants.inset20)
+                    self.headerView.layer.shadowOpacity = 0.0
                     self.layoutIfNeeded()
                 }
             case .down:
                 self.didScrollingDown?()
                 self.headerView.collapseHeader()
                 UIView.animate(withDuration: 0.25) {
+                    self.menuTableView.layer.cornerRadius = 0
+                    self.headerView.layer.zPosition = 2
                     self.headerView.snp.updateConstraints { update in
-                        update.height.equalTo(140)
+                        update.height.equalTo(120)
                     }
+                    self.headerView.clipsToBounds = false
+                    self.headerView.layer.shadowColor = Colors.headerShadow?.cgColor
+                    self.headerView.layer.shadowOpacity = 1.0
+                    self.headerView.layer.shadowRadius = 6.0
+                    self.headerView.layer.shadowOffset = CGSize(width: 0, height: Constants.inset10)
                     self.layoutIfNeeded()
                 }
             }

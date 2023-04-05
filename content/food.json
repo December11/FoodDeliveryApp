@@ -3,22 +3,40 @@
         "title": "Пицца",
         "dishes": [
             {
-                "name": "Пицца Сырная",
-                "description": "С томатным соусом и Моцареллой",
-                "price": "489 ₽",
-                "photoLink": "https://shefcook.ru/wp-content/uploads/2017/12/351.jpg"
+                "name": "Пицца Цыпленок карри",
+                "description": "Цыпленок, ананасы, соус карри, красный лук, сладкий перец, моцарелла, фирменный томатный соус",
+                "price": "589 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_pizza_z_kurczakiem_i_frytkami.png"
             },
             {
-                "name": "Пицца Цыпленок Барбекю",
-                "description": "С куриным филе, хрустящим беконом и луком",
-                "price": "728 ₽",
-                "photoLink": "https://www.edaedet.ru/upload/iblock/ed5/ed57fbca32def289227ea00d01fdb0f1.JPG"
+                "name": "Пицца Весенняя",
+                "description": "Цыпленок, кукуруза, болгарский перец, красный лук, моцарелла, фирменный соус ранч",
+                "price": "763 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_vegemix.png"
             },
             {
                 "name": "Пицца Пепперони",
-                "description": "С пикантной пепперони, Моцареллой и томатным соусом",
+                "description": "Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус",
                 "price": "728 ₽",
-                "photoLink": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg"
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/6a95378ae8d34f088d057a754a404319_760x760.png"
+            },
+            {
+                "name": "Пицца Домашняя",
+                "description": "Пикантная пепперони, ветчина, маринованные огурчики, томаты, моцарелла, фирменный томатный соус",
+                "price": "829 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_wiejska.png"
+            },
+            {
+                "name": "Пицца Грибная Сливочная",
+                "description": "Шампиньоны, увеличенная порция моцареллы, фирменный сливочный соус",
+                "price": "638 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_kremowa_piczarka.png"
+            },
+            {
+                "name": "Пицца Барбеню",
+                "description": "Вырезка, бекон, соус барбекю, красный лук, моцарелла, фирменный томатный соус",
+                "price": "908 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/103b207fd6e345c192c52f087c57df14_1875x1875.png"
             }
         ]
     },
@@ -30,6 +48,18 @@
                 "description": "Запеченые дольки картофеля с альпийскими колбасками и луком",
                 "price": "249 ₽",
                 "photoLink": "https://www.povarenok.ru/data/cache/2016jun/27/12/1626326_97592-640x480.jpg"
+            },
+            {
+                "name": "Куриные крылишки барбекю",
+                "description": "Куриные крылышки со специями и ароматом копчения. В порции присутствуют локтевые и плечевые части крылышек, соус барбекю",
+                "price": "349 ₽",
+                "photoLink": "https://w7.pngwing.com/pngs/978/336/png-transparent-fried-chicken-buffalo-wing-barbecue-japanese-cuisine-fried-chicken-wings-food-recipe-chicken-meat.png"
+            },
+            {
+                "name": "Сырные палочки",
+                "description": "Соус ранч/чесночный в комплекте",
+                "price": "269 ₽",
+                "photoLink": "https://img.freepik.com/premium-photo/cheese-sticks_392895-22263.jpg"
             }
         ]
     },
@@ -37,28 +67,34 @@
         "title": "Десерты",
         "dishes": [
             {
-                "name": "Узелки сладкие",
-                "description": "С корицей и сахарной пудрой",
-                "price": "159 ₽",
-                "photoLink": "https://sdelajtort.ru/assets/dist/img/pages/recipe-page/reczeptyi-bulochek/bulochki-uzelki-s-koriczej/bulochki-uzelki-s-koriczej14.jpg"
+                "name": "Мильфей с лесными ягодами",
+                "description": "Со свежими сливками и сахарной пудрой",
+                "price": "359 ₽",
+                "photoLink": "https://storage.yvision.kz/images/user/konspay/i9v6nb9ByiITLoyx0FhSmBL61eD8nj.jpg"
             },
             {
-                "name": "Рогалики с клубникой",
+                "name": "Круассан с клубникой",
                 "description": "С сыром кремчиз, клубникой и соусом",
-                "price": "229 ₽",
-                "photoLink": "https://russian-boy.ru/wp-content/uploads/2020/09/0-1.png"
+                "price": "329 ₽",
+                "photoLink": "https://cdn.pixabay.com/photo/2021/09/27/16/10/croissant-6661477_960_720.png"
             },
             {
                 "name": "Сырники",
                 "description": "С соусом",
-                "price": "189 ₽",
-                "photoLink": "https://prostokvashino.ru/upload/iblock/b1b/b1b727e06d8f0b23c6ea5e8f31c7df0f.jpg"
+                "price": "289 ₽",
+                "photoLink": "https://316024.selcdn.ru/wiget/bf749079-720c-11e7-80df-d8d38565926f/aba07f7a-67b7-4db9-b26b-9c91c96d686e_Large_.jpg"
             },
             {
                 "name": "Чизкейк Нью-Йорк",
                 "description": "С клубничным соусом",
-                "price": "199 ₽",
-                "photoLink": "https://i.obozrevatel.com/food/recipemain/2019/2/8/999470-880x544.jpg?size=636x424"
+                "price": "399 ₽",
+                "photoLink": "https://balthazar.club/uploads/posts/2022-03/1646324204_1-balthazar-club-p-chizkeik-na-belom-fone-1.jpg"
+            },
+            {
+                "name": "Тирамису",
+                "description": "Классический",
+                "price": "399 ₽",
+                "photoLink": "https://www.savon-d-lion.ru/sites/default/files/tiramisu.jpg"
             }
         ]
     },
@@ -66,16 +102,32 @@
         "title": "Напитки",
         "dishes": [
             {
-                "name": "Квас Русский Дар",
-                "description": "Натуральный квас",
+                "name": "Квас Очаковский",
+                "description": "Натуральный квас, 2л.",
                 "price": "139 ₽",
-                "photoLink": "https://rskrf.ru/upload/iblock/0e7/0e78e8e579b80b8eaa6fee26e47cf530.jpg"
+                "photoLink": "https://roscontrol.com/wp-content/uploads/2021/09/bceb8f1cf48a389a0c52.jpg"
             },
             {
                 "name": "Морс",
                 "description": "Брусничный",
                 "price": "179 ₽",
-                "photoLink": "https://s1.eda.ru/StaticContent/Photos/121208021522/130111145722/p_O.jpg"
+                "photoLink": "https://img1.freepng.ru/20180809/hih/kisspng-caff-americano-mors-drink-pregnancy-juice-mors-klukva-5b6c212fa728d7.0558968215338130396847.jpg"
+            },{
+                "name": "Комбуча с морковью и имбирем",
+                "description": "Низкое содержание  сахара, натуральный продукт, 0.5л.",
+                "price": "239 ₽",
+                "photoLink": "https://img2.gratispng.com/20180926/ysw/kisspng-kombucha-tea-turmeric-coca-cola-sweetness-products-mojo-beverages-5bac0e1feff969.888933021538002463983.jpg"
+            },
+            {
+                "name": "Вода Аква Минерале",
+                "description": "Негазированная, 0.5л.",
+                "price": "100 ₽",
+                "photoLink": "https://roscontrol.com/wp-content/uploads/2021/09/4aa8e16ff6af3c24c2d2.jpg"
+            }{
+                "name": "Вода Аква Минерале",
+                "description": "Газированная, 0.5л.",
+                "price": "100 ₽",
+                "photoLink": "https://parkandpizza.ru/wp-content/uploads/2018/08/am_06l_gaz-800x800.jpg"
             }
         ]
     }

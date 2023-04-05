@@ -31,22 +31,27 @@ final class HeaderView: UIView {
     func collapseHeader() {
         UIView.animate(withDuration: 0.25) {
             self.bannersCollectionView.alpha = 0.0
-            self.bannersCollectionView.snp.updateConstraints { make in
-                make.height.equalTo(0)
+            self.bannersCollectionView.snp.updateConstraints { update in
+                update.height.equalTo(0)
             }
 //            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 0, y: 0)
 //            self.layoutIfNeeded()
+
+            self.categoryCollectionView.snp.updateConstraints { update in
+                update.top.equalTo(self.bannersCollectionView.snp.bottom)
+            }
         }
     }
 
     func restoreHeader() {
         UIView.animate(withDuration: 0.25) {
-//            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.bannersCollectionView.snp.updateConstraints { make in
-                make.height.equalTo(300)
+            self.bannersCollectionView.snp.updateConstraints { update in
+                update.height.equalTo(300)
             }
             self.bannersCollectionView.alpha = 1.0
-//            self.layoutIfNeeded()
+            self.categoryCollectionView.snp.updateConstraints { update in
+                update.top.equalTo(self.bannersCollectionView.snp.bottom).offset(Constants.inset24)
+            }
         }
     }
 
