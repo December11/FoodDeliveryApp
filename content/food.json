@@ -44,16 +44,16 @@
         "title": "Горячее",
         "dishes": [
             {
-                "name": "Картофель по-баварски",
-                "description": "Запеченые дольки картофеля с альпийскими колбасками и луком",
+                "name": "Картофель фри",
+                "description": "Картофельные дольки, обжаренные во фритюре. Соус кепчуп/кисло-сладкий/сырный",
                 "price": "249 ₽",
-                "photoLink": "https://www.povarenok.ru/data/cache/2016jun/27/12/1626326_97592-640x480.jpg"
+                "photoLink": "https://brest.pizza-italiana.by/upload/iblock/41b/axkc0krmbquej98pdyw5phag65ucscmm.png"
             },
             {
                 "name": "Куриные крылишки барбекю",
                 "description": "Куриные крылышки со специями и ароматом копчения. В порции присутствуют локтевые и плечевые части крылышек, соус барбекю",
                 "price": "349 ₽",
-                "photoLink": "https://w7.pngwing.com/pngs/978/336/png-transparent-fried-chicken-buffalo-wing-barbecue-japanese-cuisine-fried-chicken-wings-food-recipe-chicken-meat.png"
+                "photoLink": "https://bigbenny.ru/media/uploads/2018/05/IMG_6555.png"
             },
             {
                 "name": "Сырные палочки",
@@ -76,7 +76,7 @@
                 "name": "Круассан с клубникой",
                 "description": "С сыром кремчиз, клубникой и соусом",
                 "price": "329 ₽",
-                "photoLink": "https://cdn.pixabay.com/photo/2021/09/27/16/10/croissant-6661477_960_720.png"
+                "photoLink": "https://i.obozrevatel.com/food/recipemain/2022/6/6/sandvich-z-kruassana-z-polunyceusitewebukr.jpg"
             },
             {
                 "name": "Сырники",
@@ -111,13 +111,13 @@
                 "name": "Морс",
                 "description": "Брусничный",
                 "price": "179 ₽",
-                "photoLink": "https://img1.freepng.ru/20180809/hih/kisspng-caff-americano-mors-drink-pregnancy-juice-mors-klukva-5b6c212fa728d7.0558968215338130396847.jpg"
+                "photoLink": "https://st.depositphotos.com/1005048/1289/i/600/depositphotos_12898018-stock-photo-juice-cowberry-with-berries.jpg"
             },
             {
-                "name": "Комбуча с морковью и имбирем",
-                "description": "Низкое содержание  сахара, натуральный продукт, 0.5л.",
+                "name": "Сок Rich в ассортименте",
+                "description": "Сок в ассортименте, 1л.",
                 "price": "239 ₽",
-                "photoLink": "https://img2.gratispng.com/20180926/ysw/kisspng-kombucha-tea-turmeric-coca-cola-sweetness-products-mojo-beverages-5bac0e1feff969.888933021538002463983.jpg"
+                "photoLink": "https://irecommend.ru/sites/default/files/product-images/476951/mkY8uncKIcBXUK9wR2y8w.jpg"
             },
             {
                 "name": "Вода Аква Минерале",
