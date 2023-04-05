@@ -5,13 +5,32 @@ import UIKit
 
 final class MenuViewController: UIViewController, MenuViewInputProtocol {
     let presenter: MenuPresenter?
-
     private var contentView: MenuView?
     private let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.style = .large
         return view
+    }()
+
+    private var errorImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = Images.error
+        imageView.isHidden = true
+        return imageView
+    }()
+
+    private var errorLabel: AppLabel = {
+        let label = AppLabel(
+            title: Texts.generalError,
+            alignment: .center,
+            style: FontStyle.title13,
+            fontColor: Colors.textMinor,
+            numberLines: 0
+        )
+        label.isHidden = true
+        return label
     }()
 
     init(presenter: MenuPresenter) {
@@ -52,5 +71,21 @@ final class MenuViewController: UIViewController, MenuViewInputProtocol {
 
         navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.isTranslucent = false
+    }
+
+    func showErrorBackground() {
+        activityIndicator.stopAnimating()
+        errorImageView.isHidden = false
+        errorLabel.isHidden = false
+        view.backgroundColor = Colors.backgroundMain
+
+        let stackView = UIStackView(arrangedSubviews: [errorImageView, errorLabel])
+        stackView.axis = .vertical
+        stackView.spacing = Constants.inset8
+        stackView.alignment = .center
+        view.addSubview(stackView)
+        stackView.snp.updateConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 }

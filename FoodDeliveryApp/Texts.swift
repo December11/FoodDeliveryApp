@@ -8,4 +8,5 @@ struct Texts {
     static let cartTabbar = "Корзина"
     static let defaultCity = "Москва"
     static let from = "от"
+    static let generalError = "Что-то пошло не так.\nПопробуйте позднее, должно получиться"
 }

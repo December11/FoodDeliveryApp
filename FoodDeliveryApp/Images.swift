@@ -9,4 +9,5 @@ struct Images {
     static let profileTabbar = UIImage(named: "profile") ?? UIImage()
     static let cartTabbar = UIImage(named: "cart") ?? UIImage()
     static let chervonDown = UIImage(named: "chevronDown") ?? UIImage()
+    static let error = UIImage(named: "error") ?? UIImage()
 }
