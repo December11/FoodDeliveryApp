@@ -84,16 +84,16 @@ extension MenuTableView: UIScrollViewDelegate {
             didScrollToNextSection?(indexPath.section)
         }
 
-        print("Scrolling did scrolled")
-        if scrollView.contentOffset.y < 0 {
-            print("Scrolling up")
+//        print("Scrolling did scrolled")
+        if scrollView.contentOffset.y <= 0 {
             if previousScrollDirection != .up {
+                print("Scrolling up")
                 didStartScrolling?(.up)
             }
             previousScrollDirection = .up
         } else if scrollView.contentOffset.y > 0 {
-            print("Scrolling down")
             if previousScrollDirection != .down {
+                print("Scrolling down")
                 didStartScrolling?(.down)
             }
             previousScrollDirection = .down

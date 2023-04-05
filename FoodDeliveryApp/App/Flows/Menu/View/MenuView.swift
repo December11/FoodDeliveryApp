@@ -48,17 +48,21 @@ final class MenuView: UIView {
             case .up:
                 self.didScrollingUp?()
                 self.headerView.restoreHeader()
-                self.headerView.snp.updateConstraints { update in
-                    update.height.equalTo(260)
+                UIView.animate(withDuration: 0.25) {
+                    self.headerView.snp.updateConstraints { update in
+                        update.height.equalTo(260)
+                    }
+                    self.layoutIfNeeded()
                 }
-                UIView.animate(withDuration: 1.0, delay: 0.5) {}
             case .down:
                 self.didScrollingDown?()
                 self.headerView.collapseHeader()
-                self.headerView.snp.updateConstraints { update in
-                    update.height.equalTo(120)
+                UIView.animate(withDuration: 0.25) {
+                    self.headerView.snp.updateConstraints { update in
+                        update.height.equalTo(140)
+                    }
+                    self.layoutIfNeeded()
                 }
-                UIView.animate(withDuration: 1.0, delay: 0.5) {}
             }
         }
     }

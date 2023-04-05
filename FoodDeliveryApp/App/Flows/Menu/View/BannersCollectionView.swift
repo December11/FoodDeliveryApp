@@ -43,9 +43,9 @@ final class BannersCollectionView: UICollectionView {
         showsHorizontalScrollIndicator = false
         contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         backgroundColor = Colors.backgroundMinor
-        snp.makeConstraints { make in
-            make.height.equalTo(Layout.itemHeight)
-        }
+//        snp.makeConstraints { make in
+//            make.height.equalTo(Layout.itemHeight)
+//        }
     }
 }
 

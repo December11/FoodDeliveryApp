@@ -29,34 +29,24 @@ final class HeaderView: UIView {
     required init?(coder: NSCoder) { nil }
 
     func collapseHeader() {
-        UIView.animate(withDuration: 0.4, delay: 0.1) {
-            self.bannersCollectionView.layer.opacity = 0.0
-            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 0, y: 0)
-            self.layoutSubviews()
-        } completion: { _ in
-            self.bannersCollectionView.isHidden = true
-            self.categoryCollectionView.snp.remakeConstraints { remake in
-                remake.top.equalTo(self.locationLabel.snp.bottom).offset(Constants.inset24)
-                remake.horizontalEdges.equalToSuperview()
-                remake.bottom.equalToSuperview().inset(Constants.inset24)
+        UIView.animate(withDuration: 0.25) {
+            self.bannersCollectionView.alpha = 0.0
+            self.bannersCollectionView.snp.updateConstraints { make in
+                make.height.equalTo(0)
             }
+//            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 0, y: 0)
+//            self.layoutIfNeeded()
         }
     }
 
     func restoreHeader() {
-        UIView.animate(withDuration: 0.4, delay: 0.1) {
-            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.bannersCollectionView.layer.opacity = 1.0
-            self.layoutSubviews()
-        } completion: { _ in
-            UIView.animate(withDuration: 0.6, delay: 0.1) {
-                self.bannersCollectionView.isHidden = false
-                self.categoryCollectionView.snp.remakeConstraints { remake in
-                    remake.top.equalTo(self.bannersCollectionView.snp.bottom).offset(Constants.inset24)
-                    remake.horizontalEdges.equalToSuperview()
-                    remake.bottom.equalToSuperview().inset(Constants.inset24)
-                }
+        UIView.animate(withDuration: 0.25) {
+//            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.bannersCollectionView.snp.updateConstraints { make in
+                make.height.equalTo(300)
             }
+            self.bannersCollectionView.alpha = 1.0
+//            self.layoutIfNeeded()
         }
     }
 
@@ -71,6 +61,10 @@ final class HeaderView: UIView {
         backgroundColor = Colors.backgroundMinor
         addSubviews([locationLabel, locationIcon, bannersCollectionView, categoryCollectionView])
 
+        snp.makeConstraints { make in
+            make.height.equalTo(260)
+        }
+
         locationLabel.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().inset(Constants.inset16)
         }
@@ -82,6 +76,8 @@ final class HeaderView: UIView {
         bannersCollectionView.snp.makeConstraints { make in
             make.top.equalTo(locationLabel.snp.bottom).offset(Constants.inset24)
             make.horizontalEdges.equalToSuperview()
+            make.height.equalTo(300)
+//            make.width.equalTo(112 * 2 + 16)
         }
         categoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(bannersCollectionView.snp.bottom).offset(Constants.inset24)
