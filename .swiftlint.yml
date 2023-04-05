@@ -20,8 +20,6 @@ opt_in_rules:
   
 excluded:
   - Pods
-  - DarknessBot/Models/Common/Localizables.swift
-  - DarknessBot/External/Charts
 
 line_length:
   warning: 120
@@ -63,10 +61,6 @@ vertical_parameter_alignment:
 
 #Будет ошибка при отсутствии нужных пробелов при указании возвращаемого значения
 return_arrow_whitespace:
-  error
-
-#Будет ошибка при лишнем упоминании неиспользуемых объектов
-unused_optional_binding:
   error
 
 #Будет ошибка при указании уточненных типов массивов и словарей в устаревших форматах
@@ -141,8 +135,8 @@ custom_rules:
 
 # warning_threshold: 100
 
-custom_func_line_breaks:
-  name: "Переносы при вызове функции"
-  regex: "\\w+\\((\\w+: |)[\\w.|\\[\\]\":$%]+,$"
-  message: "Переносы строк необходимо делать по гайду"
-  severity: error
+  custom_func_line_breaks:
+    name: "Переносы при вызове функции"
+    regex: "\\w+\\((\\w+: |)[\\w.|\\[\\]\":$%]+,$"
+    message: "Переносы строк необходимо делать по гайду"
+    severity: error

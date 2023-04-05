@@ -6,8 +6,6 @@ import UIKit
 final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.delegate = self
         configureTabBar()
     }
 
@@ -35,7 +33,14 @@ final class TabBarViewController: UITabBarController {
             $1.tabBarItem.image = dataSource[$0].icon
         }
 
-//        tabBar.backgroundColor = Colors.backgroundMain
+        let tabBarAppearance = UITabBarAppearance()
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        tabBarAppearance.configureWithTransparentBackground()
+        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = Colors.textMinor
+        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [
+            .foregroundColor: Colors.textMinor ?? .gray,
+            .font: FontStyle.subtitle
+        ]
         tabBar.tintColor = Colors.accent
     }
 

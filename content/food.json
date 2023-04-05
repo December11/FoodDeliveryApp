@@ -1,0 +1,171 @@
+[
+    {
+        "title": "Пицца",
+        "dishes": [
+            {
+                "name": "Пицца Цыпленок карри",
+                "description": "Цыпленок, ананасы, соус карри, красный лук, сладкий перец, моцарелла, фирменный томатный соус",
+                "price": "589 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_pizza_z_kurczakiem_i_frytkami.png"
+            },
+            {
+                "name": "Пицца Весенняя",
+                "description": "Цыпленок, кукуруза, болгарский перец, красный лук, моцарелла, фирменный соус ранч",
+                "price": "763 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_vegemix.png"
+            },
+            {
+                "name": "Пицца Пепперони",
+                "description": "Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус",
+                "price": "728 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/6a95378ae8d34f088d057a754a404319_760x760.png"
+            },
+            {
+                "name": "Пицца Домашняя",
+                "description": "Пикантная пепперони, ветчина, маринованные огурчики, томаты, моцарелла, фирменный томатный соус",
+                "price": "829 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_wiejska.png"
+            },
+            {
+                "name": "Пицца Грибная Сливочная",
+                "description": "Шампиньоны, увеличенная порция моцареллы, фирменный сливочный соус",
+                "price": "638 ₽",
+                "photoLink": "https://static.takeaway.com/images/restaurants/pl/31N3N0QN/products/1_kremowa_piczarka.png"
+            },
+            {
+                "name": "Пицца Барбеню",
+                "description": "Вырезка, бекон, соус барбекю, красный лук, моцарелла, фирменный томатный соус",
+                "price": "908 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/103b207fd6e345c192c52f087c57df14_1875x1875.png"
+            }
+        ]
+    },
+    {
+        "title": "Горячее",
+        "dishes": [
+            {
+                "name": "Картофель фри",
+                "description": "Картофельные дольки, обжаренные во фритюре. Соус кепчуп/кисло-сладкий/сырный",
+                "price": "249 ₽",
+                "photoLink": "https://brest.pizza-italiana.by/upload/iblock/41b/axkc0krmbquej98pdyw5phag65ucscmm.png"
+            },
+            {
+                "name": "Куриные крылишки барбекю",
+                "description": "Куриные крылышки со специями и ароматом копчения. В порции присутствуют локтевые и плечевые части крылышек, соус барбекю",
+                "price": "349 ₽",
+                "photoLink": "https://bigbenny.ru/media/uploads/2018/05/IMG_6555.png"
+            },
+            {
+                "name": "Сырные палочки",
+                "description": "Соус ранч/чесночный в комплекте",
+                "price": "269 ₽",
+                "photoLink": "https://img.freepik.com/premium-photo/cheese-sticks_392895-22263.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Закуски",
+        "dishes": [
+            {
+                "name": "Салат Цезарь",
+                "description": "Цыпленок, свежие листья салата айсберг, томаты черри, сыры чеддер и пармезан, соус цезарь, пшеничные гренки, итальянские травы",
+                "price": "139 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/47ddf27830724963a32879e1bdd043d1_1875x1875.jpeg"
+            },
+            {
+                "name": "Салат Греческий",
+                "description": "Салат айсберг, томаты, маслины, свежий огурец, кубики брынзы, соус бальзамик",
+                "price": "179 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/2abba37827b74782a1e871e11e645031_1875x1875.jpeg"
+            },
+            {
+                "name": "Салат Цезарь с креветками",
+                "description": "Креветки, свежие листья салата айсберг, томаты, сыры чеддер и пармезан, соус цезарь, пшеничные гренки, итальянские травы",
+                "price": "239 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/527e2241c2f04b479a5fea9140eb73cb_1875x1875.jpeg"
+            },
+            {
+                "name": "Додстер",
+                "description": "Легендарная горячая закуска с цыпленком, томатами, моцареллой, соусом ранч в тонкой пшеничной лепешке",
+                "price": "100 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/be03844e8b8a401ba4af5a4e7f74ea37_584x584.jpeg"
+            },
+            {
+                "name": "Додстер Карри",
+                "description": "Горячая закуска с цыпленком, ананасом, сладким перцем, моцареллой и пряным соусом карри в тонкой пшеничной лепешке",
+                "price": "100 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/b7c243f3ed50478ba91563f858aa5a6a_584x584.jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Десерты",
+        "dishes": [
+            {
+                "name": "Мильфей с лесными ягодами",
+                "description": "Со свежими сливками и сахарной пудрой",
+                "price": "359 ₽",
+                "photoLink": "https://storage.yvision.kz/images/user/konspay/i9v6nb9ByiITLoyx0FhSmBL61eD8nj.jpg"
+            },
+            {
+                "name": "Круассан с клубникой",
+                "description": "С сыром кремчиз, клубникой и соусом",
+                "price": "329 ₽",
+                "photoLink": "https://i.obozrevatel.com/food/recipemain/2022/6/6/sandvich-z-kruassana-z-polunyceusitewebukr.jpg"
+            },
+            {
+                "name": "Сырники",
+                "description": "С соусом",
+                "price": "289 ₽",
+                "photoLink": "https://316024.selcdn.ru/wiget/bf749079-720c-11e7-80df-d8d38565926f/aba07f7a-67b7-4db9-b26b-9c91c96d686e_Large_.jpg"
+            },
+            {
+                "name": "Чизкейк Нью-Йорк",
+                "description": "С клубничным соусом",
+                "price": "399 ₽",
+                "photoLink": "https://balthazar.club/uploads/posts/2022-03/1646324204_1-balthazar-club-p-chizkeik-na-belom-fone-1.jpg"
+            },
+            {
+                "name": "Тирамису",
+                "description": "Классический",
+                "price": "399 ₽",
+                "photoLink": "https://www.savon-d-lion.ru/sites/default/files/tiramisu.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Напитки",
+        "dishes": [
+            {
+                "name": "Квас Очаковский",
+                "description": "Натуральный квас, 2л.",
+                "price": "139 ₽",
+                "photoLink": "https://roscontrol.com/wp-content/uploads/2021/09/bceb8f1cf48a389a0c52.jpg"
+            },
+            {
+                "name": "Морс",
+                "description": "Брусничный",
+                "price": "179 ₽",
+                "photoLink": "https://st.depositphotos.com/1005048/1289/i/600/depositphotos_12898018-stock-photo-juice-cowberry-with-berries.jpg"
+            },
+            {
+                "name": "Сок Rich в ассортименте",
+                "description": "Сок в ассортименте, 1л.",
+                "price": "239 ₽",
+                "photoLink": "https://irecommend.ru/sites/default/files/product-images/476951/mkY8uncKIcBXUK9wR2y8w.jpg"
+            },
+            {
+                "name": "Вода Аква Минерале",
+                "description": "Негазированная, 0.5л.",
+                "price": "100 ₽",
+                "photoLink": "https://roscontrol.com/wp-content/uploads/2021/09/4aa8e16ff6af3c24c2d2.jpg"
+            },
+            {
+                "name": "Вода Аква Минерале",
+                "description": "Газированная, 0.5л.",
+                "price": "100 ₽",
+                "photoLink": "https://parkandpizza.ru/wp-content/uploads/2018/08/am_06l_gaz-800x800.jpg"
+            }
+        ]
+    }
+]
