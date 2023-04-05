@@ -63,6 +63,7 @@ final class MenuTableViewCell: UITableViewCell {
             make.top.equalTo(descriptionLabel.snp.bottom).offset(Constants.inset16)
             make.trailing.equalToSuperview().inset(Constants.inset24)
             make.bottom.equalToSuperview().inset(Constants.inset16)
+            make.height.equalTo(Constants.inset32)
         }
     }
 }

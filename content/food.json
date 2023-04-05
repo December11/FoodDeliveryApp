@@ -64,6 +64,41 @@
         ]
     },
     {
+        "title": "Закуски",
+        "dishes": [
+            {
+                "name": "Салат Цезарь",
+                "description": "Цыпленок, свежие листья салата айсберг, томаты черри, сыры чеддер и пармезан, соус цезарь, пшеничные гренки, итальянские травы",
+                "price": "139 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/47ddf27830724963a32879e1bdd043d1_1875x1875.jpeg"
+            },
+            {
+                "name": "Салат Греческий",
+                "description": "Салат айсберг, томаты, маслины, свежий огурец, кубики брынзы, соус бальзамик",
+                "price": "179 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/2abba37827b74782a1e871e11e645031_1875x1875.jpeg"
+            },
+            {
+                "name": "Салат Цезарь с креветками",
+                "description": "Креветки, свежие листья салата айсберг, томаты, сыры чеддер и пармезан, соус цезарь, пшеничные гренки, итальянские травы",
+                "price": "239 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/527e2241c2f04b479a5fea9140eb73cb_1875x1875.jpeg"
+            },
+            {
+                "name": "Додстер",
+                "description": "Легендарная горячая закуска с цыпленком, томатами, моцареллой, соусом ранч в тонкой пшеничной лепешке",
+                "price": "100 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/be03844e8b8a401ba4af5a4e7f74ea37_584x584.jpeg"
+            },
+            {
+                "name": "Додстер Карри",
+                "description": "Горячая закуска с цыпленком, ананасом, сладким перцем, моцареллой и пряным соусом карри в тонкой пшеничной лепешке",
+                "price": "100 ₽",
+                "photoLink": "https://cdn.dodostatic.net/static/Img/Products/b7c243f3ed50478ba91563f858aa5a6a_584x584.jpeg"
+            }
+        ]
+    },
+    {
         "title": "Десерты",
         "dishes": [
             {
