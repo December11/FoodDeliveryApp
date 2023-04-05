@@ -18,7 +18,7 @@ final class HeaderView: UIView {
         return imageView
     }()
 
-    private let bannersCollectionView = BannersCollectionView(imageURLStrings: Constants.bannerURLs)
+    private let bannersCollectionView = BannersCollectionView(imageURLStrings: Constants.bannerURLStrings)
     private let categoryCollectionView: CategoryCollectionView
 
     init(categories: [String]) {

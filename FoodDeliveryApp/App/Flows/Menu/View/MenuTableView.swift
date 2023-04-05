@@ -53,9 +53,10 @@ extension MenuTableView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard values.sections.indices.contains(indexPath.section),
-              values.sections[indexPath.section].dishes.count > indexPath.row,
-              let cell: MenuTableViewCell = tableView.cell(forRowAt: indexPath)
+        guard
+            values.sections.indices.contains(indexPath.section),
+            values.sections[indexPath.section].dishes.count > indexPath.row,
+            let cell: MenuTableViewCell = tableView.cell(forRowAt: indexPath)
         else { return UITableViewCell() }
         let dishes = values.sections[indexPath.section].dishes
         cell.configure(content: dishes[indexPath.row], isFirst: indexPath.section == 0 && indexPath.row == 0)

@@ -18,7 +18,7 @@ final class ImageDownloadService: Downloadable {
         configuration.urlCache = URLCache(
             memoryCapacity: Parameters.memoryCapacity,
             diskCapacity: Parameters.diskCapacity,
-            diskPath: "myImageCache"
+            diskPath: "imageCache"
         )
         let session = URLSession(configuration: configuration)
         let request = URLRequest(url: url)

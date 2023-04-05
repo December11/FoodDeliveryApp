@@ -19,9 +19,9 @@ struct Constants {
     static let inset260: CGFloat = 260.0
     static let inset300: CGFloat = 300.0
 
-    static let datasourceURL =
+    static let datasourceURLString =
         "https://raw.githubusercontent.com/December11/FoodDeliveryApp/feature/menu-list/content/food.json"
-    static let bannerURLs = [
+    static let bannerURLStrings = [
         "https://raw.githubusercontent.com/December11/FoodDeliveryApp/feature/menu-list/content/bbdcde65e7e95920e9f71a180817df1a.jpeg",
         "https://raw.githubusercontent.com/December11/FoodDeliveryApp/feature/menu-list/content/f6acf7e8e259819d3dd44499cb49eb54.jpeg"
     ]

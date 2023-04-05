@@ -11,7 +11,7 @@ final class NetworkService: RequestProtocol {
     private let session = URLSession.shared
 
     func fetch(completion: @escaping (Result<[MenuDTO], Error>) -> Void) {
-        guard let url = URL(string: Constants.datasourceURL) else { return }
+        guard let url = URL(string: Constants.datasourceURLString) else { return }
         let task = session.dataTask(with: url) { data, _, error in
             guard error == nil, let data else {
                 if let error = error {

@@ -6,8 +6,6 @@ import UIKit
 final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.delegate = self
         configureTabBar()
     }
 
@@ -40,7 +38,7 @@ final class TabBarViewController: UITabBarController {
         tabBarAppearance.configureWithTransparentBackground()
         tabBarAppearance.stackedLayoutAppearance.normal.iconColor = Colors.textMinor
         tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-            .foregroundColor: Colors.textMinor,
+            .foregroundColor: Colors.textMinor ?? .gray,
             .font: FontStyle.subtitle
         ]
         tabBar.tintColor = Colors.accent

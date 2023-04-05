@@ -27,9 +27,9 @@ final class MenuPresenter: MenuViewOutputProtocol {
             case let .failure(error):
                 self.viewInput?.showErrorBackground()
                 debugPrint(error)
-            case let .success(DTOObject):
+            case let .success(objects):
                 var sections = [MenuSection]()
-                DTOObject.forEach { object in
+                objects.forEach { object in
                     let dishes = object.dishes.map {
                         Dish(
                             title: $0.name,
