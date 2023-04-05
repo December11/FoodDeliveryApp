@@ -12,7 +12,12 @@ struct Constants {
     static let inset20: CGFloat = 20.0
     static let inset24: CGFloat = 24.0
     static let inset32: CGFloat = 32.0
+    static let inset88: CGFloat = 88.0
+    static let inset112: CGFloat = 112.0
+    static let inset120: CGFloat = 120.0
     static let inset132: CGFloat = 132.0
+    static let inset260: CGFloat = 260.0
+    static let inset300: CGFloat = 300.0
 
     static let datasourceURL =
         "https://raw.githubusercontent.com/December11/FoodDeliveryApp/feature/menu-list/content/food.json"

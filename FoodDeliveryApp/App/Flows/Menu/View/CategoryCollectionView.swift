@@ -6,8 +6,8 @@ import UIKit
 
 final class CategoryCollectionView: UICollectionView {
     private struct Layout {
-        static let itemWidth: CGFloat = 88
-        static let itemHeight: CGFloat = 32
+        static let itemWidth: CGFloat = Constants.inset88
+        static let itemHeight: CGFloat = Constants.inset32
     }
 
     var categoryWasChoosen: ((String) -> Void)?
@@ -22,8 +22,6 @@ final class CategoryCollectionView: UICollectionView {
         return layout
     }()
 
-    // MARK: - Construction
-
     init(categories: [String]) {
         self.categories = categories
         super.init(frame: .zero, collectionViewLayout: layout)
@@ -31,8 +29,6 @@ final class CategoryCollectionView: UICollectionView {
     }
 
     required init?(coder: NSCoder) { nil }
-
-    // MARK: - Private functions
 
     private func configure() {
         dataSource = self
@@ -46,7 +42,7 @@ final class CategoryCollectionView: UICollectionView {
     private func configureUI() {
         showsHorizontalScrollIndicator = false
         backgroundColor = Colors.backgroundMinor
-        contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        contentInset = UIEdgeInsets(top: 0, left: Constants.inset16, bottom: 0, right: Constants.inset16)
         snp.makeConstraints { make in
             make.height.equalTo(Constants.inset32)
         }
@@ -56,8 +52,6 @@ final class CategoryCollectionView: UICollectionView {
 // MARK: - UICollectionViewDataSource
 
 extension CategoryCollectionView: UICollectionViewDataSource {
-    // MARK: - Functions
-
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

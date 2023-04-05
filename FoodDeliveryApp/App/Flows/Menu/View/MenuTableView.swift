@@ -68,8 +68,6 @@ extension MenuTableView: UITableViewDataSource {
 extension MenuTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        guard values.indices.contains(indexPath.row) else { return }
-//        didSelectRowHandler?(values[indexPath.row])
     }
 }
 
@@ -80,20 +78,16 @@ extension MenuTableView: UIScrollViewDelegate {
             let indexPath = indexPath(for: firstCell),
             indexPath.section != currentSection {
             currentSection = indexPath.section
-            print("User scrolled to beginning of section \(indexPath.section)")
             didScrollToNextSection?(indexPath.section)
         }
 
-//        print("Scrolling did scrolled")
         if scrollView.contentOffset.y <= 0 {
             if previousScrollDirection != .up {
-                print("Scrolling up")
                 didStartScrolling?(.up)
             }
             previousScrollDirection = .up
         } else if scrollView.contentOffset.y > 0 {
             if previousScrollDirection != .down {
-                print("Scrolling down")
                 didStartScrolling?(.down)
             }
             previousScrollDirection = .down

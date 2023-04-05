@@ -10,7 +10,8 @@ final class HeaderView: UIView {
         }
     }
 
-    private let locationLabel = AppLabel(title: "Москва", style: FontStyle.title17)
+    private let duration = 0.25
+    private let locationLabel = AppLabel(title: Texts.defaultCity, style: FontStyle.title17)
     private let locationIcon: UIImageView = {
         let imageView = UIImageView(image: Images.chervonDown)
         imageView.contentMode = .center
@@ -29,14 +30,11 @@ final class HeaderView: UIView {
     required init?(coder: NSCoder) { nil }
 
     func collapseHeader() {
-        UIView.animate(withDuration: 0.25) {
-            self.bannersCollectionView.alpha = 0.0
+        UIView.animate(withDuration: duration) {
+            self.bannersCollectionView.alpha = 0
             self.bannersCollectionView.snp.updateConstraints { update in
                 update.height.equalTo(0)
             }
-//            self.bannersCollectionView.transform = CGAffineTransform(scaleX: 0, y: 0)
-//            self.layoutIfNeeded()
-
             self.categoryCollectionView.snp.updateConstraints { update in
                 update.top.equalTo(self.bannersCollectionView.snp.bottom)
             }
@@ -44,11 +42,11 @@ final class HeaderView: UIView {
     }
 
     func restoreHeader() {
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: duration) {
             self.bannersCollectionView.snp.updateConstraints { update in
-                update.height.equalTo(300)
+                update.height.equalTo(Constants.inset300)
             }
-            self.bannersCollectionView.alpha = 1.0
+            self.bannersCollectionView.alpha = Constants.inset1
             self.categoryCollectionView.snp.updateConstraints { update in
                 update.top.equalTo(self.bannersCollectionView.snp.bottom).offset(Constants.inset24)
             }
@@ -67,22 +65,21 @@ final class HeaderView: UIView {
         addSubviews([locationLabel, locationIcon, bannersCollectionView, categoryCollectionView])
 
         snp.makeConstraints { make in
-            make.height.equalTo(260)
+            make.height.equalTo(Constants.inset260)
         }
 
         locationLabel.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().inset(Constants.inset16)
         }
         locationIcon.snp.makeConstraints { make in
-            make.leading.equalTo(locationLabel.snp.trailing).offset(Constants.inset16)
+            make.leading.equalTo(locationLabel.snp.trailing).offset(Constants.inset8)
             make.top.equalToSuperview().inset(Constants.inset24)
             make.centerY.equalTo(locationLabel.snp.centerY)
         }
         bannersCollectionView.snp.makeConstraints { make in
             make.top.equalTo(locationLabel.snp.bottom).offset(Constants.inset24)
             make.horizontalEdges.equalToSuperview()
-            make.height.equalTo(300)
-//            make.width.equalTo(112 * 2 + 16)
+            make.height.equalTo(Constants.inset300)
         }
         categoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(bannersCollectionView.snp.bottom).offset(Constants.inset24)

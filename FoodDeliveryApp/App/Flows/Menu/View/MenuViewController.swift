@@ -31,8 +31,6 @@ final class MenuViewController: UIViewController, MenuViewInputProtocol {
         presenter?.fetch(completion: { [weak self] menu in
             guard let self else { return }
             self.contentView = MenuView(menu: menu)
-//            self.contentView.contentInset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.height, left: 0,
-//            bottom: 0, right: 0)
             if let contentView = self.contentView {
                 self.view.addSubview(contentView)
                 self.activityIndicator.stopAnimating()

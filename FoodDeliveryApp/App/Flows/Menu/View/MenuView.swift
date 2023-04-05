@@ -9,6 +9,7 @@ final class MenuView: UIView {
 
     private let headerView: HeaderView
     private let menuTableView: MenuTableView
+    private let duration = 0.25
     private var currentCategory: String?
     private var previousCategory: String?
     private var menu: Menu
@@ -48,27 +49,27 @@ final class MenuView: UIView {
             case .up:
                 self.didScrollingUp?()
                 self.headerView.restoreHeader()
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: self.duration) {
                     self.headerView.snp.updateConstraints { update in
-                        update.height.equalTo(260)
+                        update.height.equalTo(Constants.inset260)
                     }
                     self.menuTableView.roundCorners([.allCorners], radius: Constants.inset20)
-                    self.headerView.layer.shadowOpacity = 0.0
+                    self.headerView.layer.shadowOpacity = 0
                     self.layoutIfNeeded()
                 }
             case .down:
                 self.didScrollingDown?()
                 self.headerView.collapseHeader()
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: self.duration) {
                     self.menuTableView.layer.cornerRadius = 0
                     self.headerView.layer.zPosition = 2
                     self.headerView.snp.updateConstraints { update in
-                        update.height.equalTo(120)
+                        update.height.equalTo(Constants.inset120)
                     }
                     self.headerView.clipsToBounds = false
                     self.headerView.layer.shadowColor = Colors.headerShadow?.cgColor
                     self.headerView.layer.shadowOpacity = 1.0
-                    self.headerView.layer.shadowRadius = 6.0
+                    self.headerView.layer.shadowRadius = Constants.inset6
                     self.headerView.layer.shadowOffset = CGSize(width: 0, height: Constants.inset10)
                     self.layoutIfNeeded()
                 }

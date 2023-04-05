@@ -11,7 +11,7 @@ struct FontStyle {
     /// 16, bold
     static let title16 = UIFont.systemFont(ofSize: 16, weight: .bold)
     /// 17, bold
-    static let title17 = UIFont.systemFont(ofSize: 17, weight: .bold)
+    static let title17 = UIFont.systemFont(ofSize: 17, weight: .semibold)
 }
 
 final class AppLabel: UILabel {

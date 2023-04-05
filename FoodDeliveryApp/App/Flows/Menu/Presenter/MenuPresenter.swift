@@ -22,7 +22,7 @@ final class MenuPresenter: MenuViewOutputProtocol {
         provider.fetch { result in
             switch result {
             case let .failure(error):
-                print(error)
+                debugPrint(error)
             case let .success(DTOObject):
                 var sections = [MenuSection]()
                 DTOObject.forEach { object in

@@ -24,7 +24,6 @@ final class NetworkService: RequestProtocol {
             do {
                 let listDTO = try JSONDecoder().decode([MenuDTO].self, from: data)
                 DispatchQueue.main.async {
-                    print("@@ listDTO = \(listDTO)")
                     completion(.success(listDTO))
                 }
             } catch {

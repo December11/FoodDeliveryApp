@@ -22,7 +22,7 @@ final class BannersCollectionViewCell: UICollectionViewCell {
 
     private func configureUI() {
         addSubview(imageView)
-        layer.shadowRadius = 10.0
+        layer.shadowRadius = Constants.inset10
         layer.shadowColor = Colors.bannerShadow?.cgColor
         clipsToBounds = false
         imageView.snp.makeConstraints { make in

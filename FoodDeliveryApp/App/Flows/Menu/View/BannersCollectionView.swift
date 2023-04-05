@@ -9,8 +9,6 @@ final class BannersCollectionView: UICollectionView {
         static let itemHeight: CGFloat = 112
     }
 
-    var itemTapCompletion: ((String) -> Void)?
-
     private let contents: [String]
     private let layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -20,8 +18,6 @@ final class BannersCollectionView: UICollectionView {
         return layout
     }()
 
-    // MARK: - Construction
-
     init(imageURLStrings: [String]) {
         contents = imageURLStrings
         super.init(frame: .zero, collectionViewLayout: layout)
@@ -30,30 +26,22 @@ final class BannersCollectionView: UICollectionView {
 
     required init?(coder: NSCoder) { nil }
 
-    // MARK: - Private functions
-
     private func configure() {
         dataSource = self
-//        delegate = self
         registerCell(BannersCollectionViewCell.self)
         configureUI()
     }
 
     private func configureUI() {
         showsHorizontalScrollIndicator = false
-        contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        contentInset = UIEdgeInsets(top: 0, left: Constants.inset16, bottom: 0, right: Constants.inset16)
         backgroundColor = Colors.backgroundMinor
-//        snp.makeConstraints { make in
-//            make.height.equalTo(Layout.itemHeight)
-//        }
     }
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension BannersCollectionView: UICollectionViewDataSource {
-    // MARK: - Functions
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         contents.count
     }
@@ -70,13 +58,3 @@ extension BannersCollectionView: UICollectionViewDataSource {
         return cell
     }
 }
-
-// MARK: - UICollectionViewDelegate
-
-// extension BannersCollectionView: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let contentURLString = contents[indexPath.row]
-//        itemTapCompletion?(contentURLString)
-//    }
-// }

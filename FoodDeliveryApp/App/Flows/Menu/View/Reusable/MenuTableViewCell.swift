@@ -34,7 +34,7 @@ final class MenuTableViewCell: UITableViewCell {
         mealImageView.downloadedImage(URLString: content.imageURLString)
         titleLabel.text = content.title
         descriptionLabel.text = content.description
-        button.configure(title: "от \(content.price)")
+        button.configure(title: "\(Texts.from) \(content.price)")
     }
 
     private func configureUI() {
